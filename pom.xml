@@ -6,7 +6,16 @@
   <version>1.0</version>
   <name>PMC</name>
   <packaging>pom</packaging>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>1.3.0.RELEASE</version>
+  </parent>
+
   <modules>
     <module>pmc-app</module>
+    <module>pmc-api</module>
+    <module>pmc-model-repo</module>
   </modules>
 </project>
