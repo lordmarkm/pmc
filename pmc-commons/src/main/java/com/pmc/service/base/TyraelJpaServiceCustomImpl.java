@@ -16,7 +16,7 @@ import com.pmc.model.base.BaseEntity;
  * @param <D> DTO
  */
 public abstract class TyraelJpaServiceCustomImpl<E extends BaseEntity, D, R extends TyraelJpaService<E>>
-    extends MappingService<E, D> {
+    extends MappingService<E, D> implements TyraelJpaServiceCustom<E, D> {
 
     @Autowired
     protected R repo;

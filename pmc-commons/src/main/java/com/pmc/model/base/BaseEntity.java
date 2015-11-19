@@ -5,7 +5,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
+import javax.persistence.PrePersist;
+import javax.persistence.PreUpdate;
 
+import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;
 
 /**
@@ -18,10 +21,12 @@ public class BaseEntity {
     @GeneratedValue(strategy = GenerationType.TABLE)
     protected Long id;
 
-    @Column(name = "created")
+    @Column(name = "created_date")
+    @Type(type="org.jadira.usertype.dateandtime.joda.PersistentDateTime")
     protected DateTime dateCreated;
 
-    @Column(name = "updated")
+    @Column(name = "updated_date")
+    @Type(type="org.jadira.usertype.dateandtime.joda.PersistentDateTime")
     protected DateTime dateUpdated;
 
     @Column(name = "created_by")
@@ -29,6 +34,17 @@ public class BaseEntity {
 
     @Column(name = "updated_by")
     protected String updatedBy;
+
+    @PrePersist
+    public void create() {
+        this.dateCreated = DateTime.now();
+        this.dateUpdated = DateTime.now();
+    }
+
+    @PreUpdate
+    public void update() {
+        this.dateUpdated = DateTime.now();
+    }
 
     public Long getId() {
         return id;

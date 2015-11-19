@@ -13,6 +13,6 @@ import com.pmc.service.base.TyraelJpaServiceCustom;
  */
 public interface RegistrationTokenServiceCustom extends TyraelJpaServiceCustom<RegistrationToken, RegistrationTokenDto> {
 
-    List<RegistrationTokenDto> generate(int count);
+    List<RegistrationTokenDto> generate(String countryCode, int count);
 
 }

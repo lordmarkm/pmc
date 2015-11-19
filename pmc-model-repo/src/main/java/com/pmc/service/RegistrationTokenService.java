@@ -12,4 +12,6 @@ import com.pmc.service.custom.RegistrationTokenServiceCustom;
 public interface RegistrationTokenService extends RegistrationTokenServiceCustom,
     TyraelJpaService<RegistrationToken> {
 
+    RegistrationToken findByToken(String registrationToken);
+
 }
