@@ -3,6 +3,8 @@ package com.pmc.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 
+import com.pmc.model.base.BaseEntity;
+
 /**
  * @author markm
  */

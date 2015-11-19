@@ -1,4 +1,4 @@
-package com.pmc.model;
+package com.pmc.model.base;
 
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;

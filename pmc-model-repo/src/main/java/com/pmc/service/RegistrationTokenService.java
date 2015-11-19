@@ -1,9 +1,15 @@
 package com.pmc.service;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-
 import com.pmc.model.RegistrationToken;
+import com.pmc.service.base.TyraelJpaService;
+import com.pmc.service.custom.RegistrationTokenServiceCustom;
 
-public interface RegistrationTokenService extends JpaRepository<RegistrationToken, Long> {
+/**
+ * 
+ * @author Mark Martinez, Nov 19, 2015
+ *
+ */
+public interface RegistrationTokenService extends RegistrationTokenServiceCustom,
+    TyraelJpaService<RegistrationToken> {
 
 }
