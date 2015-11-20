@@ -29,8 +29,8 @@ public class MemberRecordServiceCustomImpl
     public MemberRecordDto register(String registrationToken, MemberRecordDto registrant) {
 
         RegistrationToken token = registrationTokenService.findByToken(registrationToken);
-        Preconditions.checkNotNull(token);
-        Preconditions.checkArgument(token.getMemberRecord() == null);
+        Preconditions.checkNotNull(token, "Registration token not found");
+        Preconditions.checkArgument(token.getMemberRecord() == null, "Registration token is already in use");
 
         MemberRecord record = toEntity(registrant);
         record.setRegToken(token);

@@ -16,6 +16,7 @@ public class MemberRecordDto extends BaseDto {
     private DateTime expirationDate;
     private boolean approved;
     private boolean expired;
+    private RegistrationTokenDto regToken;
 
     public NameDto getName() {
         return name;
@@ -47,5 +48,10 @@ public class MemberRecordDto extends BaseDto {
     public void setExpired(boolean expired) {
         this.expired = expired;
     }
-
+    public RegistrationTokenDto getRegToken() {
+        return regToken;
+    }
+    public void setRegToken(RegistrationTokenDto regToken) {
+        this.regToken = regToken;
+    }
 }
