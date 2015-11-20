@@ -34,6 +34,7 @@ public class SwaggerConfig {
     }
 
     //Select any api that matches one of these paths
+    @SuppressWarnings("unchecked")
     private Predicate<String> paths() {
         return or(
                 regex("/regtoken.*"),
