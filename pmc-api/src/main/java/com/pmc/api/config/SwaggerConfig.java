@@ -37,7 +37,8 @@ public class SwaggerConfig {
     private Predicate<String> paths() {
         return or(
                 regex("/regtoken.*"),
-                regex("/member.*"));
+                regex("/member.*"),
+                regex("/member-approval.*"));
     }
 
     private ApiInfo apiInfo() {
