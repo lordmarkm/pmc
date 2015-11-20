@@ -2,6 +2,11 @@ package com.pmc.dto.base;
 
 import org.joda.time.DateTime;
 
+/**
+ * 
+ * @author Mark Martinez, Nov 21, 2015
+ *
+ */
 public class BaseDto {
 
     protected DateTime dateCreated;

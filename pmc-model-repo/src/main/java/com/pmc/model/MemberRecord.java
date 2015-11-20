@@ -8,7 +8,6 @@ import javax.persistence.OneToOne;
 import javax.persistence.PostLoad;
 import javax.persistence.Transient;
 
-import org.hibernate.annotations.ColumnTransformer;
 import org.hibernate.annotations.Type;
 import org.joda.time.DateTime;
 
