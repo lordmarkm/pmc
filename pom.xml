@@ -18,6 +18,7 @@
     <module>pmc-api</module>
     <module>pmc-model-repo</module>
     <module>pmc-commons</module>
+    <module>pmc-services</module>
   </modules>
 
   <properties>

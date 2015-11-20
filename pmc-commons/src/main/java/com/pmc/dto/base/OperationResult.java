@@ -11,6 +11,13 @@ public class OperationResult<T> {
     private String status;
     T data;
 
+    public OperationResult() {
+    }
+
+    public OperationResult(T data) {
+        this.data = data;
+    }
+
     public OperationResult<T> withMessage(String message) {
         this.message = message;
         return this;

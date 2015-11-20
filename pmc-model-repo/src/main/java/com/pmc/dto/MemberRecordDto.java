@@ -17,6 +17,7 @@ public class MemberRecordDto extends BaseDto {
     private boolean approved;
     private boolean expired;
     private RegistrationTokenDto regToken;
+    private String registrationTokenString;
 
     public NameDto getName() {
         return name;
@@ -53,5 +54,13 @@ public class MemberRecordDto extends BaseDto {
     }
     public void setRegToken(RegistrationTokenDto regToken) {
         this.regToken = regToken;
+    }
+
+    public String getRegistrationTokenString() {
+        return registrationTokenString;
+    }
+
+    public void setRegistrationTokenString(String registrationTokenString) {
+        this.registrationTokenString = registrationTokenString;
     }
 }

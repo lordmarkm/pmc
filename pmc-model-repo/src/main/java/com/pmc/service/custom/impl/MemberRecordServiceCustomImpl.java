@@ -1,6 +1,9 @@
 package com.pmc.service.custom.impl;
 
+import com.pmc.dto.base.PageInfo;
+import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.google.common.base.Preconditions;
@@ -39,6 +42,11 @@ public class MemberRecordServiceCustomImpl
         token.setMemberRecord(record);
 
         return toDto(record);
+    }
+
+    @Override
+    public PageInfo<MemberRecordDto> findInfoByApprovalDate(DateTime approvalDate, Pageable page) {
+        return toPageInfo(repo.findByApprovedDate(approvalDate, page));
     }
 
 }

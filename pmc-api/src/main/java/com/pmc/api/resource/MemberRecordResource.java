@@ -34,7 +34,7 @@ public class MemberRecordResource {
 
     @RequestMapping(value = "/for-approval", method = GET)
     public ResponseEntity<PageInfo<MemberRecordDto>> forApproval(Pageable page) {
-        return null;
+        return new ResponseEntity<PageInfo<MemberRecordDto>>(service.findInfoByApprovalDate(null, page), OK);
     }
 
     @RequestMapping(value = "/register/{registrationToken}", method = POST)
