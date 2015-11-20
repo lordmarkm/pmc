@@ -1,17 +1,19 @@
 package com.pmc;
 
+import static org.dozer.loader.api.FieldsMappingOptions.copyByReference;
+import static org.dozer.loader.api.FieldsMappingOptions.oneWay;
+
+import javax.annotation.PostConstruct;
+
+import org.dozer.DozerBeanMapper;
+import org.dozer.loader.api.BeanMappingBuilder;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
 import com.pmc.dto.MemberRecordDto;
 import com.pmc.dto.base.BaseDto;
 import com.pmc.model.MemberRecord;
 import com.pmc.model.base.BaseEntity;
-import org.dozer.DozerBeanMapper;
-import org.dozer.loader.api.BeanMappingBuilder;
-import org.dozer.loader.api.TypeMappingOptions;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-
-import javax.annotation.PostConstruct;
-import static org.dozer.loader.api.FieldsMappingOptions.*;
 
 /**
  * 
